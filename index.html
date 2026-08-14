@@ -29,102 +29,111 @@
 <style>
 :root{--yellow:#FFD60A;--black:#0a0a0a;--white:#fff;--gray:#f5f5f5}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Poppins','Noto Sans Sinhala',sans-serif;background:var(--white);color:var(--black);line-height:1.6}
-header{position:sticky;top:0;z-index:100;background:var(--black);color:var(--white);display:flex;justify-content:space-between;align-items:center;padding:14px 5%;}
-.logo{font-weight:700;font-size:22px;letter-spacing:1px}
-.logo span{color:var(--yellow)}
-nav a{color:var(--white);text-decoration:none;margin-left:20px;font-size:14px}
-.btn-yellow{background:var(--yellow);color:var(--black);padding:12px 22px;border-radius:30px;text-decoration:none;font-weight:700;display:inline-block;transition:.2s}
-.btn-yellow:hover{transform:translateY(-2px)}
-.hero{padding:70px 5%;background:var(--black);color:var(--white);display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
-.hero h1{font-size:42px;line-height:1.2;margin-bottom:15px}
+body{font-family:'Poppins','Noto Sans Sinhala',sans-serif;background:#fff;color:#111;line-height:1.6}
+header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center;padding:12px 5%;}
+.logo img{height:52px;width:auto}
+nav{display:flex;gap:22px}
+nav a{color:#333;text-decoration:none;font-size:14px;font-weight:500}
+.header-right{display:flex;align-items:center;gap:10px}
+.phone-pill{border:1px solid #ddd;border-radius:30px;padding:8px 14px;font-size:13px;text-decoration:none;color:#111;display:flex;align-items:center;gap:6px}
+.wa-pill{background:var(--black);color:#fff;border-radius:30px;padding:8px 14px;font-size:13px;text-decoration:none;display:flex;align-items:center;gap:6px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:30px;text-decoration:none;font-weight:600;font-size:14px;transition:.2s}
+.btn-yellow{background:var(--yellow);color:#000}
+.btn-dark{background:var(--black);color:#fff;border:1px solid #222}
+.hero{padding:60px 5%;background:var(--black);color:#fff;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;position:relative;overflow:hidden}
+.hero h1{font-size:44px;line-height:1.15;margin-bottom:18px}
 .hero h1 b{color:var(--yellow)}
-.hero p{opacity:.8;margin-bottom:25px}
-.hero-img{background:var(--yellow);border-radius:20px;height:320px;display:flex;align-items:center;justify-content:center;font-size:70px}
+.hero p{opacity:.75;margin-bottom:28px;max-width:520px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.hero-card{background:#fff;color:#111;border-radius:20px;padding:18px;box-shadow:0 20px 40px rgba(0,0,0,.4);position:relative}
+.hero-card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.badge{font-size:11px;background:var(--yellow);padding:5px 10px;border-radius:20px;font-weight:700}
+.mock{border:2px solid #111;border-radius:12px;padding:18px;background:#fff}
+.mock h3{font-size:20px}
+.status{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px;font-size:11px;opacity:.7}
 section{padding:60px 5%}
-h2{text-align:center;font-size:32px;margin-bottom:10px}
-.sub{text-align:center;opacity:.6;margin-bottom:35px}
+h2{font-size:32px;margin-bottom:10px}
+.sub{opacity:.6;margin-bottom:30px}
 .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card{background:var(--gray);padding:25px;border-radius:16px;border:1px solid #eee}
-.card h3{margin-bottom:8px}
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
-.g-item{background:#ddd;border-radius:14px;height:220px;overflow:hidden;position:relative;cursor:pointer;border:2px dashed #bbb;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px}
-.g-item img{width:100%;height:100%;object-fit:cover;display:block}
-.contact{background:var(--black);color:var(--white);border-radius:24px;margin:20px 5%;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.card{background:var(--gray);padding:24px;border-radius:16px;border:1px solid #eee}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.g-item{background:#ddd;border-radius:14px;height:210px;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px dashed #bbb}
+.g-item img{width:100%;height:100%;object-fit:cover}
+.contact{background:#111;color:#fff;border-radius:24px;margin:20px 5%;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:30px}
 .contact a{color:var(--yellow);text-decoration:none}
 footer{text-align:center;padding:20px;opacity:.6;font-size:13px}
-@media(max-width:800px){.hero{grid-template-columns:1fr}.contact{grid-template-columns:1fr}header nav{display:none}.hero h1{font-size:32px}}
+@media(max-width:900px){.hero{grid-template-columns:1fr}nav{display:none}.hero h1{font-size:32px}.contact{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <header>
-<div class="logo">
-  <img src="logo.png" alt="U.A Advertising" style="height: 60px; width: auto;">
+<div class="logo"><img src="logo.png" alt="U.A Advertising"></div>
+<nav><a href="#services">සේවාවන්</a><a href="#gallery">නිර්මාණ</a><a href="#">අපි ගැන</a><a href="#contact">අමතන්න</a></nav>
+<div class="header-right">
+<a class="phone-pill" href="tel:0776976036">📞 077 697 6036</a>
+<a class="wa-pill" href="https://wa.me/94713720228" target="_blank">WhatsApp</a>
 </div>
-<nav><a href="#services">සේවාවන්</a><a href="#gallery">නිර්මාණ</a><a href="#contact">අමතන්න</a></nav>
-<a class="btn-yellow" href="https://wa.me/94713720228" target="_blank">WhatsApp</a>
 </header>
 
 <div class="hero">
 <div>
-<h1>ලංකාවේ අඩුම මිලට,<br><b>Polythene Cutouts,</b><br> සාදා ගැනීමට හොදම තැන...</h1>
-<p>U.A Advertising හීදි ලංකාවේ අඩු මිලට, Quality එකට, කාර්යක්ෂම සේවාවක් සමග <br>polythene cutouts සාදා ගැනීමට හොදම තැන...<p>
-<a class="btn-yellow" href="tel:0776976036">📞 077 697 6036 අමතන්න</a>
-<a class="btn-yellow" style="background:#fff;margin-left:10px" href="https://wa.me/94713720228" target="_blank">WhatsApp 0713720228</a>
-<p style="margin-top:15px;font-size:14px">📍 No.05, Oliyakotuwa, Uduthuththiripitiya</p>
+<p style="font-size:10px;letter-spacing:2px;opacity:.6;margin-bottom:10px">● OLIYAKOTUWA - UDUTHUTHIRIPITIYA</p>
+<h1>
+ලංකාවේ අඩුම මිලට,<br>
+Quality එකට<br>
+<b>Polythene Cutouts</b><br>
+සාදා ගැනීමට හොදම තැන...
+</h1>
+<p>U.A Advertising හිදී ලංකාවේ අඩුම මිලට, Quality එකට, කාර්යක්ෂම සේවාවක් සමග polythene cutouts සාදා ගැනීමට හොදම තැන. උසස් තත්වයේ, කල් පවතින නිර්මාණ - ඔබේ ව්‍යාපාරයට ගැලපෙන ලෙසින්.</p>
+<div class="hero-btns">
+<a class="btn btn-yellow" href="https://wa.me/94713720228?text=Hello%20U.A%20Advertising,%20banner%20ekak%20hadaganna%20kamatii" target="_blank">💬 WhatsApp වෙතින් අමතන්න →</a>
+<a class="btn btn-dark" href="#gallery">🖼️ අපගේ නිර්මාණ බලන්න</a>
 </div>
-<div class="hero-img">🎨</div>
+<p style="font-size:12px;opacity:.6">✔ High Quality Print &nbsp; ✔ Fast Delivery &nbsp; ✔ Custom Design</p>
+</div>
+<div class="hero-card">
+<div class="hero-card-top"><span style="font-size:10px;opacity:.5">U.A_ADVERTISING</span><span class="badge">Affordable Price!</span></div>
+<div class="mock"><small style="background:#111;color:#fff;padding:3px 8px;border-radius:4px;font-size:10px">U.A ADS</small><h3>GRAND OPENING<br>50% OFF</h3><div style="height:4px;background:var(--yellow);margin-top:10px;border-radius:2px"></div></div>
+<div style="background:#111;color:#fff;border-radius:12px;padding:12px;margin-top:12px;display:flex;justify-content:space-between;align-items:center"><div><small style="opacity:.6;font-size:10px">LIVE PREVIEW</small><div style="font-weight:700;font-size:13px">GRAND OPENING - 50% OFF</div></div><div style="background:var(--yellow);color:#000;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center">✦</div></div>
+<div class="status"><div>STATUS<br><b>Ready</b></div><div>SIZE<br><b>Any Size</b></div><div>PRINT<br><b>Same Day</b></div></div>
+</div>
 </div>
 
 <section id="services">
+<p style="font-size:11px;letter-spacing:2px;opacity:.5">OUR SERVICES</p>
 <h2>අපගේ සේවාවන්</h2>
-<p class="sub">ඔබේ ව්‍යාපාරයට අවශ්‍ය සියලුම ප්‍රචාරණ කටයුතු</p>
 <div class="services">
 <div class="card"><h3>Vinyl Banners</h3><p>කල් පවතින උසස් තත්වයේ vinyl banners ඕනෑම ප්‍රමාණයකින්.</p></div>
 <div class="card"><h3>Flex Banners</h3><p>අඩු මිලට ආකර්ශනීය flex printing.</p></div>
 <div class="card"><h3>Shop Boards</h3><p>ඔබේ කඩේ නම දිදුලන විදිහට Board නිර්මාණය.</p></div>
-<div class="card"><h3>Digital Printing</h3><p>Stickers, Posters, Visiting Cards සහ සියල්ල.</p></div>
+<div class="card"><h3>Polythene Cutouts</h3><p>ඔබට අවශ්‍ය ඕනෑම design එකකින් cutout සාදා දීම.</p></div>
 </div>
 </section>
 
 <section id="gallery" style="background:var(--gray)">
 <h2>අපගේ නිර්මාණ - Samples</h2>
-<p class="sub">අප කලින් නිර්මාණය කළ banner කිහිපයක්. ඔබේ photo දාන්න පහත උපදෙස් බලන්න.</p>
-<div class="gallery" id="galleryGrid">
-<!-- SAMPLE PHOTOS: images/sample1.jpg වගේ දාන්න -->
-<!-- උදා: <div class="g-item"><img src="images/sample1.jpg"></div> -->
-<div class="g-item">images/sample1.jpg<br>මෙතනට ඔබේ photo එක දාන්න</div>
+<p class="sub">අප කලින් නිර්මාණය කළ නිර්මාණ. බලන්න පමණයි.</p>
+<div class="gallery">
+<div class="g-item"><img src="logo.png" style="object-fit:contain;background:white;padding:10px"></div>
+<div class="g-item">images/sample1.jpg</div>
 <div class="g-item">images/sample2.jpg</div>
 <div class="g-item">images/sample3.jpg</div>
 <div class="g-item">images/sample4.jpg</div>
 <div class="g-item">images/sample5.jpg</div>
-<div class="g-item">images/sample6.jpg</div>
 </div>
-<p style="text-align:center;margin-top:20px;font-size:13px">Photo එකක් add කිරීමට: GitHub එකේ Add file > Upload files > images folder එකට photo upload කරන්න</p>
 </section>
 
 <div class="contact" id="contact">
 <div>
-<h2 style="text-align:left">අප අමතන්න</h2>
-<p style="margin:20px 0">ඔබට අවශ්‍ය banner එකේ විස්තර WhatsApp කරන්න. අපි මිල සහ design එක එවන්නම්.</p>
+<h2>අප අමතන්න</h2>
+<p style="margin:15px 0;opacity:.7">ඔබට අවශ්‍ය banner / cutout එකේ විස්තර WhatsApp කරන්න.</p>
 <p>📞 Phone: <a href="tel:0776976036">077 697 6036</a></p>
-<p>💬 WhatsApp: <a href="https://wa.me/94713720228" target="_blank">071 372 0228</a></p>
-<p>📍 Address: No.05, Oliyakotuwa, Uduthuththiripitiya</p>
-<br>
-<a class="btn-yellow" href="https://wa.me/94713720228?text=Hello%20U.A%20Advertising,%20mama%20banner%20ekak%20hadaganna%20kamatii" target="_blank">WhatsApp Message එකක් දාන්න</a>
+<p>💬 WhatsApp: <a href="https://wa.me/94713720228">071 372 0228</a></p>
+<p>📍 No.05, Oliyakotuwa, Uduthuththiripitiya</p><br>
+<a class="btn btn-yellow" href="https://wa.me/94713720228" target="_blank">WhatsApp Message එකක් දාන්න</a>
 </div>
-<div style="background:#1a1a1a;border-radius:16px;padding:20px;display:flex;align-items:center;justify-content:center">
-<iframe src="https://www.google.com/maps?q=Oliyakotuwa,+Uduthuththiripitiya&z=13&output=embed" style="border:0;width:100%;height:250px;border-radius:12px" loading="lazy"></iframe>
+<div><iframe src="https://www.google.com/maps?q=Oliyakotuwa,+Uduthuththiripitiya&z=14&output=embed" style="border:0;width:100%;height:260px;border-radius:14px"></iframe></div>
 </div>
-</div>
-
 <footer>© 2026 U.A Advertising | No.05, Oliyakotuwa, Uduthuththiripitiya | 077 697 6036</footer>
-
-<script>
-// Gallery click to enlarge
-document.querySelectorAll('.g-item img').forEach(img=>{
- img.addEventListener('click',()=>{ window.open(img.src,'_blank'); });
-});
-</script>
 <script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body>
 </html>
